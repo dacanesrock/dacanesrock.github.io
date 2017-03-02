@@ -1,81 +1,311 @@
-@import url("http://fonts.googleapis.com/css?family=Dosis");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700");
+/*page styling*/
+html,
+body { 
+	padding-top: 40px; 
+	background-image: url(../images/weather.png);
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+}
+/*end page styling*/
 
-body {
-	background: #f7f7f7;
-	font: 400 14px/1.6 "Open Sans", sans-serif;
-	color: #777;
-	overflow-x: hidden;
-	-ms-overflow-style: scrollbar;
+
+/*all container*/
+.container-fluid {
+	max-width: 900px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	margin: 0 auto -50px;
 }
 
-img {
-	max-width: 100%;
+.container {
+	width: auto;
+	max-width: 900px;
+	text-align: center;
+}
+/*end containers*/
+
+
+/*navbar*/
+.logo {
+	position: absolute;
+	top: -10px;
+}
+/*end navbar*/
+
+
+/*about me*/
+.main-thumbnail {
+	margin-right: 2%;
+	margin-bottom: 2%;
 }
 
-.wrapper {
+.about-me {
+	padding: 10px;
+}
+/*end about me*/
+
+
+/*contact form*/
+.input-group {
+	padding-bottom: 5px;
+}
+/*end contact form*/
+
+/*portfolio*/
+.caption {
+	text-align: center;
+	display: block;
+	position: absolute; 
+  	bottom: -50px; 
+  	width: 100%; 
+  	color: transparent;
+  	padding: 15px 0px;
+}
+
+.caption:hover {
+	color: black;
+	background-color: #BCF2FF;
+	bottom: 15px;
+}
+
+.portfolio-img {
 	position: relative;
-	background: #fff;
-	margin-top: 40px;
-	margin-bottom: 40px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+  	overflow: hidden;
+}
+/*end portfolio*/
+
+
+/*sidebar*/
+.connect {
+	padding: 10px;
 }
 
-.sidenav {
-	width: 100%;
+.connect-info {
+	padding: 5px;
+}
+/*end sidebar*/
+
+
+/*footer*/
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+	height: 50px;
+}
+#footer {
+	background-color: #f5f5f5;
+}
+/*end footer*/
+
+
+/*hover effect for portfolio*/
+.hovereffect {
+	width:100%;
+	height:100%;
+	float:left;
+	overflow:hidden;
+	position:relative;
+	text-align:center;
+	cursor:default;
 }
 
-/* ------------------------------------------------------------------
-Typography
-------------------------------------------------------------------- */
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-	line-height: 1.4;
-	font-weight: 400;
-	color: #111;
+.hovereffect .overlay {
+	width:100%;
+	height:100%;
+	position:absolute;
+	overflow:hidden;
+	top:0;
+	left:0;
+	opacity:0;
+	background-color:rgba(0,0,0,0.5);
+	-webkit-transition:all .4s ease-in-out;
+	transition:all .4s ease-in-out
 }
 
-h1, .h1 {
-	font-size: 28px;
+.hovereffect img {
+	display:block;
+	position:relative;
+	-webkit-transition:all .4s linear;
+	transition:all .4s linear;
 }
 
-h2, .h2 {
-	font-size: 20px;
+.hovereffect h2 {
+	text-transform:lowercase;
+	color:#fff;
+	text-align:center;
+	position:relative;
+	font-size:17px;
+	background:rgba(0,0,0,0.6);
+	-webkit-transform:translatey(-100px);
+	-ms-transform:translatey(-100px);
+	transform:translatey(-100px);
+	-webkit-transition:all .2s ease-in-out;
+	transition:all .2s ease-in-out;
+	padding:10px;
 }
 
-h3, .h3 {
-	font-size: 18px;
+.hovereffect a.info {
+	text-decoration:none;
+	display:inline-block;
+	text-transform:uppercase;
+	color:#fff;
+	border:1px solid #fff;
+	background-color:transparent;
+	opacity:0;
+	filter:alpha(opacity=0);
+	-webkit-transition:all .2s ease-in-out;
+	transition:all .2s ease-in-out;
+	margin:50px 0 0;
+	padding:7px 14px;
 }
 
-h4, .h4 {
-	font-size: 16px;
+.hovereffect a.info:hover {
+	box-shadow:0 0 5px #fff;
 }
 
-h5, .h5 {
-	font-size: 14px;
+.hovereffect:hover img {
+	-ms-transform:scale(1.2);
+	-webkit-transform:scale(1.2);
+	transform:scale(1.2);
 }
 
-h6, .h6 {
-	font-size: 12px;
+.hovereffect:hover .overlay {
+	opacity:1;
+	filter:alpha(opacity=100);
 }
 
-p, ol, ul, blockquote {
-	margin: 0 0 10px;
+.hovereffect:hover h2,.hovereffect:hover a.info {
+	opacity:1;
+	filter:alpha(opacity=100);
+	-ms-transform:translatey(0);
+	-webkit-transform:translatey(0);
+	transform:translatey(0);
 }
 
-.font-alt {
-	font-family: "Dosis", sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 3px;
+.hovereffect:hover a.info {
+	-webkit-transition-delay:.2s;
+	transition-delay:.2s;
+}
+/*end hover effect for portfolio*/
+
+/*hover effect for about me*/
+.hovereffect-prof {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+.hovereffect-prof .overlay-prof {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+	top: auto;
+	bottom: 0;
+	padding: 1em;
+	height: 4.75em;
+	background: #79FAC4;
+	color: #3c4a50;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+	visibility: hidden;
+
 }
 
-/* ------------------------------------------------------------------
-Modules
-------------------------------------------------------------------- */
-
-.module {
-	padding: 0 0 70px 0;
-	position: relative;
-	border-bottom: 1px solid #eee;
+.hovereffect-prof img {
+    display: block;
+    position: relative;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
 }
+
+.hovereffect-prof h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+	float: left;
+	margin: 0px;
+	display: inline-block;
+}
+
+.hovereffect-prof a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    text-transform: lowercase;
+	color: #fff;
+	border: 1px solid #fff;
+	margin: 50px 0 0 0;
+	background-color: transparent;
+}
+.hovereffect-prof a.info:hover {
+    box-shadow: 0 0 5px #fff;
+}
+
+
+.hovereffect-prof p.icon-links a {
+	color: #fff;
+	font-size: 1.4em;
+}
+
+.hovereffect-prof:hover p.icon-links a:hover,
+.hovereffect-prof:hover p.icon-links a:focus {
+	color: #252d31;
+}
+
+.hovereffect-prof h2,
+.hovereffect-prof p.icon-links a {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,200%,0);
+	transform: translate3d(0,200%,0);
+	visibility: visible;
+}
+
+.hovereffect-prof p.icon-links a span:before {
+	display: inline-block;
+	padding: 8px 10px;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.hovereffect-prof:hover .overlay-prof,
+.hovereffect-prof:hover h2,
+.hovereffect-prof:hover p.icon-links a {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.hovereffect-prof:hover h2 {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+.hovereffect-prof:hover p.icon-links a:nth-child(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.hovereffect-prof:hover p.icon-links a:nth-child(2) {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+.hovereffect-prof:hover p.icon-links a:first-child {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+/*end hover effect for about me*/	
