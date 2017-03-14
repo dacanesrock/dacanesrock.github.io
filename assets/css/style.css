@@ -6,6 +6,10 @@ body {
 	height: 100%;
 	font-family: 'Raleway', sans-serif;
 }
+
+a:hover {
+	cursor: pointer;
+}
 /*end page styling*/
 
 
